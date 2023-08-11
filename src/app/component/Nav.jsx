@@ -88,7 +88,7 @@ export default function () {
         };
       }, []);
   return (
-    <div className={ !foot ? isScrolled? ` sm:w-[100vw] h-[120px] w-[100%] bg-transparent flex items-center justify-around py-12 transition-all duration-[350ms] ease-in-out fixed sm:h-[200px]`:` sm:w-[100vw] sm:px-4  h-[120px] w-[100%] bg-transparent flex items-center justify-around py-12 relative transition-all duration-[350ms] ease-in-out`: 'hidden transition-all duration-[350ms] ease-in-out '}>
+    <div className={ !foot ? isScrolled? ` sm:w-[100vw] h-[120px] w-[100%] bg-transparent flex items-center justify-around py-12 transition-all duration-[350ms] ease-in-out fixed sm:h-[250px] sm:pt-[1rem] sm:bg-[yellow] `:` sm:w-[100vw] sm:px-4  h-[120px] w-[100%] bg-transparent flex items-center justify-around py-12 relative transition-all duration-[350ms] ease-in-out`: 'hidden transition-all duration-[350ms] ease-in-out '}>
         <div className='h-auto w-auto'>
             <a href='#home'><img src={logo} width={'140px'}/></a>
         </div>
