@@ -50,7 +50,7 @@ export default function Home() {
     <SideNav/>
     <section id='home' className='transition-all duration-75 ease-in-out'>
       <div className='h-[780px] sm:w-[100vw] w-[100%] relative'>
-      <nav className='h-[auto] w-[100%] absolute top-0 z-10'>
+      <nav className='h-[160px] w-[100%] absolute top-0 z-10'>
         <Nav/>
       </nav>
 

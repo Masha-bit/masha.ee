@@ -140,6 +140,7 @@ export default function () {
             position: relative;
           
           }
+
           .menu-button-burger::before,
           .menu-button-burger::after{
             content: "";
@@ -176,6 +177,12 @@ export default function () {
             background: ${navColor}
             ;
              /* translate(35px, 35px); */
+          }
+          @media (max-width: 639px){
+            .menu-button-burger::before,
+            .menu-button-burger::after{
+              background: #00FFB0;
+            }
           }
           
           

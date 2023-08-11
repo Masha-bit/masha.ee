@@ -16,9 +16,12 @@ export default function Work() {
 
   return (
     <div className='h-[100%] w-[100%] relative scroll-smooth'>
-      <nav className='h-[100px] w-[100%]  z-10'>
+      <div className='h-[150px] w-[100vw]'>
+
+      <nav className='h-[100px] w-[100%] absolute top-0  z-[10]'>
         <Nav/>
       </nav>
+      </div>
 
       {/* <div className='h-[800px] w-[auto] bg-[#a7cea7]'> */}
       
