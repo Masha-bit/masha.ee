@@ -1,10 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+  font-family: 'RustSans';
+  src: url('/fonts/NexaRustSans-Black01.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'RustScript';
+  src: url('/fonts/NexaRustScriptL-01.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 264, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
 
@@ -17,11 +37,246 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
+  background-color: #e8e8e8;
+  scroll-behavior: smooth;
 }
+
+.span{
+  height: 100px;
+  font-size: 25px;
+  /* font-family:'Montserrat', sans-serif; */
+  /* font-weight: 800; */
+  /* color:transparent;
+  -webkit-text-stroke: 1.25px #21eef1; */
+  position: relative;
+  
+}
+/* #21eef1 */
+
+.span::after{
+  content: "";
+  /* height: 60%; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  border-bottom: 18px solid #61727255;
+  transition: width 350ms ease-in-out;
+}
+
+.span:hover::after{
+  width: 90%;
+  transition: width 350ms ease-in-out;
+}
+
+
+/* Contact Me */
+
+#contact{
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  align-items: center;  
+}
+#contact h2{
+  font-family: 2.4em;
+  color: #B000FF;
+
+}
+#contact p{
+  width: 350px;
+  /* min-width: 60%; */
+  text-align: center;
+
+}
+#contact form{
+  height: auto;
+  width: auto;
+  /* background-color: purple; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+#contact #form-row{
+  margin-top: 4rem;
+  height: 60px;
+  width: 70vw;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+@media (max-width: 639px){
+  #contact #form-row{
+    height: 190px;
+    width: 90vw;
+    /* background-color: #B000FF; */
+    display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  align-items: center;
+    flex-direction: column;
+  }
+  #contact form{
+    padding-bottom: 1rem;
+  }
+  
+}
+#form-row aside input{
+  display: block;
+  background-color: transparent;
+  width: 320px;
+  margin-top: 1.8rem;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #B000FF;
+  font-size: 15px;
+  color: black;
+  font-family:'Montserrat', sans-serif;
+  /* padding-top: 1rem; */
+}
+#form-row aside input::placeholder{
+  /* color:#c756fb; */
+  /* background: #000; */
+  font-size: 15px;
+  font-family:'Montserrat', sans-serif;
+  padding-left: 0.4rem;
+  padding: 1rem;
+ 
+}
+form #form-message{
+  margin-top: 4rem;
+  width: 70vw;
+  /* background-color: red; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  justify-content: space-around;
+  /* background-color: red; */
+}
+textarea{
+  display: block;
+  width: 100%;
+  margin-top: 1.8rem;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #B000FF;
+  font-size: 15px;
+  color: black;
+  font-family:'Montserrat', sans-serif;
+  background-color: transparent;
+  /* background-color: #3a4458; */
+}
+
+#form-submit{
+  height: 45px;
+  width: 240px;
+  margin: 5rem 6rem;
+  border: 1px solid #B000FF;
+  font-family:'Montserrat', sans-serif;
+  display: block;
+  padding: 0;
+
+      position: relative;
+      font-weight: bold;
+      -webkit-text-transform: uppercase;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.9em;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      /* display: -webkit-inline-box; */
+      /* display: -webkit-inline-flex; */
+      /* display: -ms-flexbox; */
+      /* display: inline-flex; */
+      overflow: hidden;
+      background: transparent;
+      /* white-space: nowrap; */
+      -webkit-tap-highlight-color: transparent;
+}
+#form-submit div{
+      z-index: 1;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      position: relative;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      /* padding: 0.6em 0.2em; */
+      width: 100%;
+      height: 100%;
+      color: #B000FF;
+      /* background-color: #00df64; */
+      /* border: 1px solid #2e2e2e; */
+}
+#form-submit>div::before{
+  content: '';
+  width: 100%;
+  height: 108%;
+  pointer-events: none;
+  z-index: -1;
+  position: absolute;
+  top: -0.1em;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #B000FF;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+  
+#form-submit:hover div{
+  color: white;
+
+}
+#form-submit:hover div::before{
+  opacity: 1;
+  transform: translate(0,0);
+  /* color: white; */
+
+}
+#form-submit div svg{
+  margin-left: 0.5rem;
+}
+
+/* footer 
+ */
+ #code-profile{
+  height: auto;
+  width: 200px;
+  /* background-color: #00b350; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+}
+#footer-nav{
+  font-family:'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: #205739; */
+  height: 120px;
+  width: 200px;
+  z-index: 10;
+}
+
