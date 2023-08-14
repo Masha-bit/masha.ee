@@ -6,7 +6,7 @@ export default function (props) {
 
     const [isActive, setActive] = useState(false)
     const [isScrolled, setScroll] = useState(false)
-    const [navColor, setNavColor] = useState('#B000FF')
+    const [navColor, setNavColor] = useState('#00FFB0')
     const [logo, setLogo] = useState('/canva-portfolio design/logo_g.svg')
     const [foot, setFoot] = useState(false)
 
@@ -49,6 +49,7 @@ export default function (props) {
             setLogo('/canva-portfolio design/logo_p.svg');
           } else if (currentSectionId === 'home' || currentSectionId === 'about2') {
             setLogo('/canva-portfolio design/logo_g.svg');
+            setNavColor('#00FFB0');
           }
           
           setFoot(currentSectionId === 'footer')
@@ -88,23 +89,24 @@ export default function (props) {
         };
       }, []);
   return (
-    <div className={ !foot ? isScrolled? ` sm:w-[100vw] h-[120px] w-[100%] bg-transparent flex items-center justify-around py-12 transition-all duration-[350ms] ease-in-out fixed sm:h-[220px] sm:pt-[1rem] `:` sm:w-[100vw] sm:px-4  h-[120px] w-[100%] bg-transparent flex items-center justify-around py-12 relative transition-all duration-[350ms] ease-in-out`: 'hidden transition-all duration-[350ms] ease-in-out '}>
-        <div className='h-auto w-auto'>
-            <a href='/.'><img src={logo} width={'140px'}/></a>
+    <div className={ !foot ? isScrolled? ` sm:w-[100vw] h-[120px] w-[100%] bg-transparent flex items-center justify-around py-12 transition-all duration-[350ms] ease-in-out fixed`:` sm:w-[100vw] h-[120px] w-[100%] bg-transparent flex items-center justify-around py-12 relative transition-all duration-[350ms] ease-in-out`: 'hidden transition-all duration-[350ms] ease-in-out '}>
+        <div className='h-auto w-auto p-2'>
+        <a href='/.'><p className={`font-rust text-[29px] text-[${navColor}] transition-all`}>masha</p></a>
+            {/* <a href='/.'><img src={logo} width={'140px'}/></a> */}
         </div>
 
         <div className='h-auto w-[70%]'></div>
 
         <div id className={isActive? 'menu-toggle-button open' : 'menu-toggle-button'} onClick={handleActive}>
             <div className={ isActive? 'aside' : 'aside close'}>
-                <div className='flex flex-col justify-center h-[45%] w-[auto] text-left z-[100]'>
+                <div className='flex flex-col justify-around h-[32%] w-[200px] text-left z-[100]'>
 
                     <LinkItem link={!props.work? `/work` : `/`} text={ !props.work?`MY WORK`:`HOME`} font={`16px`} />
                     <LinkItem link={!props.trophy?`/trophy`: `/work`} text={!props.trophy?`MY TROPHIES`: `MY WORK`} font={`16px`} /> 
                     <LinkItem link={`https://www.linkedin.com/in/christopher-masha-68377924a/`} text={`MY RESUME`} font={`16px`}/>
                 </div>
 
-                <div className='flex flex-col justify-center  h-[45%] w-[auto] text-left '>
+                <div className='flex flex-col justify-center  h-[45%] w-[200px] text-left'>
                 
                 <p className='font-rust'>SAY HELLO!</p>
                     <LinkItem link={`mailto:mashachristopherifechukwude@gmail.com`} text={`hello@masha.dev`} font={`16px`}/>
@@ -118,8 +120,8 @@ export default function (props) {
         <style jsx>
             {`
         .menu-toggle-button{
-            height: 20px;
-            width: 60px;
+            height: 100px;
+            width: 100px;
             margin-left: 2rem;
             display: flex;
             align-items: center;
@@ -178,28 +180,23 @@ export default function (props) {
             ;
              /* translate(35px, 35px); */
           }
-          @media (max-width: 639px){
-            .menu-button-burger::before,
-            .menu-button-burger::after{
-              background: #00FFB0;
-            }
-          }
+          
           
           
           .aside{
             position: absolute;
             top: 0;
             right: 0;
-            height: 400px;
-            width: 300px;
+            height: 450px;
+            width: 350px;
             background-color: white;
             transition: all 500ms ease-in-out;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 0.25rem;
-            margin-top: 0.5rem;
+            padding: 0.5rem;
+            margin-top: 1rem;
             shadow:;
             z-index: -1;
 
@@ -210,6 +207,30 @@ export default function (props) {
             display: none;
             
         
+        }
+        @media (max-width: 639px){
+          .menu-button-burger::before,
+          .menu-button-burger::after{
+            background: #00FFB0;
+          }
+
+          // .aside{
+          //   position: fixed;
+          //   // top: 0;
+          //   // right: 0;
+          //   height: 100%;
+          //   width: 100vw;
+          //   background-color: #B000FF;
+          //   transition: all 500ms ease-in-out;
+          //   display: flex;
+          //   flex-direction: column;
+          //   align-items: center;
+          //   justify-content: center;
+          //   padding: 0.5rem;
+          //   // margin-top: 1rem;
+          //   // shadow:;
+          //   // z-index: -1;
+          // }
         }
         `}</style>
         </div>
