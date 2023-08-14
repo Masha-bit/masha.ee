@@ -101,7 +101,7 @@ export default function (props) {
 
                     <LinkItem link={!props.work? `/work` : `/`} text={ !props.work?`MY WORK`:`HOME`} font={`16px`} />
                     <LinkItem link={!props.trophy?`/trophy`: `/work`} text={!props.trophy?`MY TROPHIES`: `MY WORK`} font={`16px`} /> 
-                    <LinkItem link={`/https://www.linkedin.com/in/christopher-masha-68377924a`} text={`MY RESUME`} font={`16px`}/>
+                    <LinkItem link={`https://www.linkedin.com/in/christopher-masha-68377924a/`} text={`MY RESUME`} font={`16px`}/>
                 </div>
 
                 <div className='flex flex-col justify-center  h-[45%] w-[auto] text-left '>
