@@ -32,8 +32,8 @@ export default function Footer(props) {
     
                 <div id="footer-nav">
                     <LinkItem link={!props.work? `/work` : `/`} text={ !props.work?`MY WORK`:`HOME`} font={`20px`} />
-                    <LinkItem link={`/work`} text={`MY TROPHIES`} font={`20px`} />
-                    <LinkItem link={`/work`} text={`MY RESUME`} font={`20px`}/>
+                    <LinkItem link={!props.trophy?`/trophy`: `/work`} text={!props.trophy?`MY TROPHIES`: `MY WORK`} font={`20px`} />
+                    <LinkItem link={`/https://www.linkedin.com/in/christopher-masha-68377924a`} text={`MY RESUME`} font={`20px`}/>
                 </div>
     
     

@@ -1,54 +1,34 @@
 "use client"
 import React from 'react'
 import Nav from '../component/Nav'
-import ProjectContainer from '../component/ProjectContainer'
+import AwardContainer from '../component/AwardContainer'
 import Contact from '../component/Contact'
 import Footer from '../component/Footer'
-import { useParams } from 'next/navigation'
 
-export default function Work() {
-
-  const router = useParams()
-  const {slug} = router
-
-  console.log(slug)
-
-
+export default function Trophy() {
   return (
-    <div className='h-[100%] w-[100%] relative scroll-smooth'>
-      <div className='h-[100px] w-[100vw]'>
-
-      <nav className='h-[100px] w-[100%] absolute top-0  z-[10]'>
-        <Nav work={true}/>
-      </nav>
-      </div>
-
-      {/* <div className='h-[800px] w-[auto] bg-[#a7cea7]'> */}
+    <div 
+    className='h-[auto] sm:w-[100vw] w-[100vw] sm:bg-left bg-[#35353527] bg-blend-overlay bg-fixed absolute left-0 bg-right flex flex-col justify-center items-center'
+    style={{
+    backgroundImage: `url('/canva-portfolio design/7.png')`
+    }}>
+        
+    <div className='h-[100px] w-[100vw]'>
+    <nav className='h-[100px] w-[100%] absolute top-0  z-[10]'>
+        <Nav work={true} trophy={true}/>
+    </nav>
+    </div>
       
-      <h1 className='font-rust text-[32px]'>/work.</h1>
-        <p className='font-montserrat text-[20px]'>Selected projects i've worked on in the past.</p>
-
-        <div className="project-grid">
-
-            <ProjectContainer title="authentication ui" linkText="app.hellotax.com" link="https://authentication-masha-ui.vercel.app/" slug="authentication-ui"  img={"/pixel2Html.svg"}/>
-            
-
-            <ProjectContainer title="aptech food court" linkText="food-app.com" link="https://food-court-o4ac.vercel.app/" slug="aptech-mobile-foodcourt" img={"aptech.png"}/>
-
-
-            <ProjectContainer title="webthreeconsulting" linkText="webthreeconsulting.com" link="https://web3-consulting-ui.vercel.app/" slug="webthreeconsulting" img={"wtc.svg"}/>
-
-            <ProjectContainer title="masha.ee" linkText="masha.ee" link="" img={"/canva-portfolio design/logo_p.svg"}/>
-            
-            <ProjectContainer title="Dignisia"  slug="dignisia"  img={"/dingisia.svg"}/>
-      </div>
+    <h1 className='font-rust text-[32px]'>/trophies.</h1>
+    <p className='font-montserrat text-[20px]'>Feel free to contact me to discuss more on my achievements so far.</p>
+    
 
       <section id='contact' className='transition-all duration-75 ease-in-out h-[100vh] w-[100%] overflow-hidden'>
-      <Contact title={`Don't be a stranger!`} subtitle={`Suggestions, compliments or just a simple hello are all welcome`} messageplaceholder={`Hi, love what you do, I would love to connect`}/>
+      <Contact title={`Hi, there! Don't be a stranger!`} subtitle={`Suggestions, compliments or just a simple hello are all welcome`} messageplaceholder={`Hi, I would love to know more of X and what you have accomplished in your field`}/>
       </section>
 
       <section id='footer' className='transition-all duration-75 ease-in-out h-[100vh] w-[100%]'>
-      <Footer work={true}/>
+      <Footer work={true} trophy={true}/>
       </section>
     {/* </div> */}
     <style jsx>
@@ -66,9 +46,9 @@ p{
 }
 .project-grid{
   margin: 3rem auto;
-  /* background-color: green; */
+//   background-color: green; 
   height: auto;
-  width: 70%;
+  width: auto;
   padding-top: 3rem;
   padding-bottom: 1rem;
   /* display: flex;
@@ -145,3 +125,4 @@ aside .bottom{
     </div>
   )
 }
+

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import LinkItem from './LinkItem'
 
-export default function () {
+export default function (props) {
 
     const [isActive, setActive] = useState(false)
     const [isScrolled, setScroll] = useState(false)
@@ -90,7 +90,7 @@ export default function () {
   return (
     <div className={ !foot ? isScrolled? ` sm:w-[100vw] h-[120px] w-[100%] bg-transparent flex items-center justify-around py-12 transition-all duration-[350ms] ease-in-out fixed sm:h-[220px] sm:pt-[1rem] `:` sm:w-[100vw] sm:px-4  h-[120px] w-[100%] bg-transparent flex items-center justify-around py-12 relative transition-all duration-[350ms] ease-in-out`: 'hidden transition-all duration-[350ms] ease-in-out '}>
         <div className='h-auto w-auto'>
-            <a href='#home'><img src={logo} width={'140px'}/></a>
+            <a href='/.'><img src={logo} width={'140px'}/></a>
         </div>
 
         <div className='h-auto w-[70%]'></div>
@@ -98,10 +98,10 @@ export default function () {
         <div id className={isActive? 'menu-toggle-button open' : 'menu-toggle-button'} onClick={handleActive}>
             <div className={ isActive? 'aside' : 'aside close'}>
                 <div className='flex flex-col justify-center h-[45%] w-[auto] text-left z-[100]'>
-                   
-                    <LinkItem link={`/work`} text={`MY WORK`} font={`16px`} />
-                    <LinkItem link={`/work`} text={`MY TROPHIES`} font={`16px`}/>
-                    <LinkItem link={`/work`} text={`MY RESUME`} font={`16px`}/>
+
+                    <LinkItem link={!props.work? `/work` : `/`} text={ !props.work?`MY WORK`:`HOME`} font={`16px`} />
+                    <LinkItem link={!props.trophy?`/trophy`: `/work`} text={!props.trophy?`MY TROPHIES`: `MY WORK`} font={`16px`} /> 
+                    <LinkItem link={`/https://www.linkedin.com/in/christopher-masha-68377924a`} text={`MY RESUME`} font={`16px`}/>
                 </div>
 
                 <div className='flex flex-col justify-center  h-[45%] w-[auto] text-left '>

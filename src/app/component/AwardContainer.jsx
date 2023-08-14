@@ -1,28 +1,30 @@
 import Link from 'next/link'
 import React from 'react'
 
-export default function ProjectContainer(props) {
+export default function AwardContainer(props) {
   return (
     <aside className="project-container">
-      {/* <Link href={`/${props.slug}`} className='hover:cursor-default'> */}
+      <Link href={`/${props.slug}`} className='hover:cursor-default'>
         <section className="top">
         <img src={props.img} alt="logo" width={150}/>
         </section>
             <section className="bottom font-montserrat">
             <p>{props.title}</p>
-            <Link href={props.link? props.link: '/'} className='hover:transition-all transition-all text-[#B000FF]'>{props.linkText}</Link>
+            <Link href={props.link? props.link: '/'} className='hover:transition-all transition-all text-[#B000FF]'>
+                {props.linkText}
+            </Link>
         </section>
-        {/* </Link> */}
+        </Link>
         <style>
             {`
             .project-container{
-                height: 350px;
-                width: 290px;
-                border-radius: 5px;
+                height: 500px;
+                width: 380px;
+                // border-radius: 5px;
                 background-color: rgba(255, 255, 255, 0.479);
                 position: relative;
                 z-index: 4;
-                box-shadow: 0 4px 6px 0 rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+                box-shadow: 0 6px 12px 0 rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
               }
               aside .top{
                 height: 51%;
