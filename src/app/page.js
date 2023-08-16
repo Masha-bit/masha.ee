@@ -47,20 +47,24 @@ export default function Home() {
   return (
    <div className='h-[100vh] sm:w-[100vw] w-[100%] relative scroll-smooth' ref={ref}>
 
+    <div className='sm:hidden'>
     <SideNav/>
+    </div>
+
     <section id='home' className='transition-all duration-75 ease-in-out'>
       <div className='h-[780px] sm:w-[100vw] w-[100%] relative'>
-      <nav className='h-[160px] w-[100%] absolute top-0 z-10'>
+      
+      <nav className='h-[160px] w-[100vw] absolute top-0 z-10'>
         <Nav/>
       </nav>
 
       <div 
       id='left' 
-      className='h-[100%] sm:w-[100%] w-[65%] sm:bg-left bg-black absolute left-0 bg-right flex justify-center items-center'
+      className='h-[100%] sm:w-[100vw] w-[65%] sm:bg-left bg-black absolute left-0 bg-right flex justify-center items-center'
       style={{
         backgroundImage: `url('/canva-portfolio design/6.png')`
         }}>
-        <div className='h-[400px] w-[auto] sm:m-0  mt-[10rem] mr-[15rem] ml-[2rem] p-8 text-[#ffffff] transition-all ease-in-out '>
+        <div className='h-[400px] sm:w-[100vw] w-[auto] sm:m-0  mt-[10rem] mr-[15rem] ml-[2rem] p-8 text-[#ffffff] transition-all ease-in-out '>
         <h1 className='min-h-[100px] h-[auto] transition-all ease-in-out '>
         <TypingComponent words={words}  />
         </h1>
@@ -93,18 +97,18 @@ export default function Home() {
       }}>
         <div className='absolute sm:relative sm:w-[100%] sm:h-[50%] left-0 h-[100%] w-[50%] flex items-center justify-center p-[3rem]'>
 
-          <aside className='h-[auto] w-[400px] mt-[15rem] mr-[9rem]'>
-          <h3 className='font-rust text-[32px]'>Frontend Alchemist !</h3>
-          <p>Welcome to my world of web enchantment, where I blend creativity, innovation, and code to bring digital wonders to life. As a passionate Frontend Alchemist, I have mastered the art of crafting captivating user experiences that leave a lasting impression. With a dash of pixel perfection and a sprinkle of interactivity, I weave spells of seamless navigation and visually stunning interfaces.</p>      
+          <aside className='h-[auto] w-[400px] sm:w-[100vw] sm:m-0 mt-[15rem] mr-[9rem]'>
+          <h3 className='font-rust text-[32px] sm:text-[35px]'>Frontend Alchemist !</h3>
+          <p className='sm:text-[18px]'>Welcome to my world of web enchantment, where I blend creativity, innovation, and code to bring digital wonders to life. As a passionate Frontend Alchemist, I have mastered the art of crafting captivating user experiences that leave a lasting impression. With a dash of pixel perfection and a sprinkle of interactivity, I weave spells of seamless navigation and visually stunning interfaces.</p>      
           </aside>
 
         </div>
 
         <div className='absolute sm:relative sm:h-[50%] sm:w-[100%] right-0 h-[100%] w-[50%] flex items-center justify-center p-[3rem] '>
 
-        <aside className='h-[auto] w-[400px] mb-[16rem] mr-[8rem]'>
-        <h3 className='font-rust text-[32px]'>Painting with Pixels</h3>
-          <p>Every line of code I write is a brushstroke, and every pixel I place is carefully chosen to create a symphony of colors and shapes. As an artist, I believe in the power of aesthetics, using modern design principles and the latest technologies to create intuitive and visually striking websites.</p>  
+        <aside className='h-[auto] w-[400px] sm:w-[100vw] sm:m-0  mb-[16rem] mr-[8rem]'>
+        <h3 className='font-rust text-[32px] sm:text-[35px]'>Painting with Pixels</h3>
+          <p className='sm:text-[18px]'>Every line of code I write is a brushstroke, and every pixel I place is carefully chosen to create a symphony of colors and shapes. As an artist, I believe in the power of aesthetics, using modern design principles and the latest technologies to create intuitive and visually striking websites.</p>  
         </aside>
 
         </div>
@@ -132,14 +136,14 @@ export default function Home() {
 
 
   {/* work  */}
-    <section id='work' className=' sm:h-[auto] sm:p-[1rem] h-[100vh] w-[100%] flex items-center justify-center p-[2rem] font-montserrat transition-all duration-75 ease-in-out'>
-      <aside className='h-[80%] sm:h-[95%] sm:p-[1rem] sm:w-[95%] w-[80%] flex flex-col items-center justify-center bg-[#f1f0f0]'>
-      <h3 className='font-rust text-[32px]'> I build & design stuffs</h3>
+    <section id='work' className=' sm:h-[100vh] sm:p-[1rem] h-[100vh] w-[100%] flex items-center justify-center p-[2rem] font-montserrat transition-all duration-75 ease-in-out'>
+      <aside className='h-[80%] sm:h-[95%] sm:p-[1rem] sm:w-[100%] w-[80%] flex flex-col items-center justify-center bg-[#f1f0f0]'>
+      <h3 className='font-rust text-[32px] text-center'> I build & design stuffs</h3>
       <br />
       <br />
-      <p>Mainly Open source projects, web apps and experimentals.</p>
+      <p className='text-center'>Mainly Open source projects, web apps and experimentals.</p>
 
-      <div>
+      <div className='sm:w-[100vw]'>
         <CallToAction Text={'see my work'} Link={`/work`} border_color={`black`} text_color={`black`} fill_color={`black`}/>
       </div>
                

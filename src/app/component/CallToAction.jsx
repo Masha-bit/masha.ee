@@ -20,7 +20,7 @@ const CallToAction = (props) => {
   return (
     <div id='form-submit' onMouseOver={hoverCheck} onMouseLeave={hoverCheckOver}>
     <Link href={props.Link} className='my-[1rem]'>
-        <div className={`h-[60px] w-[190px] border-[2px] border-[${fill_color}] flex items-center justify-center overflow-hidden bg-transparent relative ' id='form-action`}>
+        <div className={`h-[60px] w-[190px] border-[2px] border-[${fill_color}] flex items-center justify-center overflow-hidden bg-transparent relative form-action`}>
              {props.Text} 
         <span className='ml-[1rem]'>
           <HiArrowLongRight style={{color:  hover === true? `white`:text_color}} size={40}/>
@@ -39,7 +39,7 @@ const CallToAction = (props) => {
         #form-submit{
             height: 45px;
             width: 240px;
-            margin: 5rem 6rem;
+            margin: 5rem auto;
             border: 1px solid ${border_color};
             font-family:'RustSans';
             display: block;

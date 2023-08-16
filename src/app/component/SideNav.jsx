@@ -30,7 +30,8 @@ export default function SideNav() {
         currentSectionId = section.id;
       }
     });
-    if (currentSectionId === 'about2') {
+    
+    if (currentSectionId == 'about2') {
       setNavColor('#00FFB0');
     } else {
       setNavColor('#B000FF');
@@ -38,6 +39,9 @@ export default function SideNav() {
 
     setActiveLink(currentSectionId);
   };
+
+  // console.log(activeLink)
+
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
