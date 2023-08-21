@@ -265,7 +265,7 @@ textarea{
  #code-profile{
   height: auto;
   width: 200px;
-  /* background-color: #00b350; */
+  background-color: #00b350;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -281,5 +281,6 @@ textarea{
   height: 120px;
   width: 200px;
   z-index: 10;
+  color: #43b08e;
 }
 
