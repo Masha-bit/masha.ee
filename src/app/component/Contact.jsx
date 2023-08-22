@@ -40,7 +40,7 @@ export default function Contact(props) {
             </div>
             </SwipeUp>
     
-            <div className='sm:h-[150px] h-[140px] sm:w-[100vw] flex items-center'>
+            <div className='sm:h-[150px] h-[140px] sm:w-[100vw] flex items-center justify-center'>
                 <SwipeUp>
                 <CallToAction Link={`#`} Text={`SHOOT`} border_color={`#B000FF`} text_color={`#B000FF`} fill_color={`#B000FF`}/>
                 </SwipeUp>

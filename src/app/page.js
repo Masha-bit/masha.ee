@@ -70,16 +70,16 @@ export default function Home() {
       style={{
         backgroundImage: `url('/canva-portfolio design/6.png')`
         }}>
-        <div className='h-[400px] sm:w-[100vw] w-[80%] sm:m-0  m-[2rem] p-8 sm:p-2 text-[#ffffff] transition-all ease-in-out'>
-        <h1 className='min-h-[100px] h-[auto] transition-all ease-in-out '>
+        <div className='h-[400px] sm:w-[100vw] w-[80%] sm:m-0  m-[2rem] sm:p-0 p-8 text-[#ffffff] transition-all ease-in-out'>
+        <h1 className='min-h-[100px] h-[auto] transition-all ease-in-out sm:p-2 '>
         <TypingComponent words={words}  />
         </h1>
         
-        <h3 className='font-montserrat text-[25px] transition-all ease-in-out'>
+        <h3 className='font-montserrat text-[25px] transition-all ease-in-out sm:p-3 sm:text-center'>
           I am <span className='span font-rust'>Masha, Christopher</span>
         </h3>
         <br/>
-        <p className='font-montserrat w-[400px]'>
+        <p className='font-montserrat w-[400px] sm:w-[100vw] sm:p-2 '>
           I like to craft solid and scalable frontend products with great user experiences
           
           {/* Welcome to this wormhole that is my brain.Explore my inner most thoughts[^_^]. Oh did i forget to mention, this is <span className='span font-rust'> MY PORTFOLIO PAGE </span> */}
@@ -88,7 +88,7 @@ export default function Home() {
 
           <br/>
                 
-        <div className='h-[auto] w-[550px] flex items-center justify-between text-[14px] text-[#00FFB0] font-montserrat'>
+        <div className='h-[auto] w-[550px] flex items-center justify-between text-[14px] text-[#00FFB0] font-montserrat sm:p-2 sm:w-[100vw] sm:h-[200px] sm:text-[16px]'>
           <p className=''>
             Highly skilled at progressive enhancement, design systems & UI engineering
           </p>
@@ -118,7 +118,7 @@ export default function Home() {
     style={{
       backgroundImage: `url('/canva-portfolio design/5.png')`
       }}>
-        <div className='absolute sm:relative sm:w-[100%] sm:h-[50%] left-0 h-[100%] w-[50%] flex items-center justify-center p-[3rem]'>
+        <div className='absolute sm:relative sm:w-[100vw] sm:h-[50%] left-0 h-[100%] w-[50%] flex items-center justify-center p-[3rem]'>
 
           <aside className='h-[auto] w-[400px] sm:w-[100vw] sm:m-0 mt-[15rem] mr-[9rem]'>
           <h3 className='font-rust text-[32px] sm:text-[35px]'>
@@ -135,7 +135,7 @@ export default function Home() {
 
         </div>
 
-        <div className='absolute sm:relative sm:h-[50%] sm:w-[100%] right-0 h-[100%] w-[50%] flex items-center justify-center p-[3rem] '>
+        <div className='absolute sm:relative sm:h-[50%] sm:w-[100vw] right-0 h-[100%] w-[50%] flex items-center justify-center p-[3rem] '>
 
         <aside className='h-[auto] w-[400px] sm:w-[100vw] sm:m-0  mb-[16rem] mr-[8rem]'>
         <h3 className='font-rust text-[32px] sm:text-[35px]'>
@@ -155,9 +155,9 @@ export default function Home() {
       
     </section>
 
-    <section id='about2' className='sm:h-[auto] sm:w-[100vw] sm:flex sm:items-center h-[100vh] w-[100%] bg-[#B000FF] text-[#ffffff] p-[2rem] font-montserrat relative transition-all duration-75 ease-in-out'>
+    <section id='about2' className='sm:h-[auto] sm:w-[100vw] sm:flex sm:flex-col sm:justify-around sm:items-center h-[100vh] w-[100%] bg-[#B000FF] text-[#ffffff] p-[2rem] font-montserrat relative transition-all duration-75 ease-in-out'>
 
-      <aside className='h-[100%] sm:w-[100%] sm:p-0 w-[50%] sm:relative absolute left-0 pl-[8rem] mt-[5rem]'>
+      <aside className='h-[100%] sm:h-[auto] sm:w-[100vw] sm:p-4 w-[50%] sm:m-0 sm:relative absolute left-0 pl-[8rem] mt-[5rem]'>
         <div className='w-[auto]'>
       <h3 className='font-rust text-[32px]'>
         <SwipeUp>
@@ -175,6 +175,15 @@ export default function Home() {
        One of my standout experiences was crafting a delightful food app, where I worked closely with a talented team to transform concepts into a mouthwatering reality. Through wireframing, prototyping, and pixel-perfect UI design, I ensured that the app was visually appetizing and intuitive. Seamlessly integrating with backend systems, I brought the app to life with smooth user flows and real-time order tracking, ensuring a hassle-free and satisfying experience for users.
        </SwipeUp>
        </p>
+       </div>
+       </aside>
+
+       <aside className='h-[100%] sm:w-[100vw] sm:h-[100vh] sm:p-0 w-[50%] sm:relative absolute right-0 flex items-center justify-center '>
+        <div className='h-[60%] sm:h-[50%] sm:w-[100vw] w-[90%] bg-contain bg-no-repeat'
+        style={{
+          backgroundImage: `url('/mashavector.svg')`
+        }}>
+
        </div>
        </aside>
 

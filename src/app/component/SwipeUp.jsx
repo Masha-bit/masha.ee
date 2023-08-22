@@ -58,7 +58,7 @@ export default function SwipeUp({delayTime, children}) {
             {children}
           </aside>
   
-          <aside className={`bg-[yellow] h-[10px] w-[100%]  absolute top-0 left-0 mt-[100%]`}></aside>
+          <aside className={`h-[10px] w-[100%]  absolute top-0 left-0 mt-[100%]`}></aside>
         
       </div>
     )
