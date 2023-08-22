@@ -8,7 +8,7 @@ import Footer from '../component/Footer'
 export default function Trophy() {
   return (
     <div 
-    className='h-[auto] sm:w-[100vw] w-[100vw] sm:bg-left bg-[#35353527] bg-blend-overlay bg-fixed absolute left-0 bg-right flex flex-col justify-center items-center'
+    className='h-[auto] sm:w-[100vw] w-[100vw] sm:bg-center bg-[#35353527] bg-blend-overlay bg-fixed absolute left-0 bg-right flex flex-col justify-center items-center'
     style={{
     backgroundImage: `url('/canva-portfolio design/7.png')`
     }}>
@@ -20,7 +20,7 @@ export default function Trophy() {
     </div>
       
     <h1 className='font-rust text-[32px]'>/trophies.</h1>
-    <p className='font-montserrat text-[20px]'>Feel free to contact me to discuss more on my achievements so far.</p>
+    <p className='font-montserrat text-[20px] sm:p-3'>Feel free to contact me to discuss more on my achievements so far.</p>
     
 
       <section id='contact' className='transition-all duration-75 ease-in-out h-[100vh] w-[100%] overflow-hidden'>

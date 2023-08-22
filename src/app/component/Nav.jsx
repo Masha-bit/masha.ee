@@ -23,7 +23,7 @@ export default function (props) {
         // useEffect(() => {
           gsap.fromTo( 
             element.querySelector("#sideNav"), {
-              opacity: 0,
+              // opacity: 0,
               yPercent: -100,
               // ease: 'power2.inOut',
             },{
@@ -31,10 +31,15 @@ export default function (props) {
               opacity: 1,
               yPercent: 0,
               // backgroundColor: "red",
-              ease: 'power1.inOut',
-            })       
-        // }, [])
-        : null
+              // ease: 'power1.inOut',
+            })   
+        : gsap.to( 
+          element.querySelector("#sideNav"), {
+            opacity: 0,
+            yPercent: -100,
+            display:"hidden",
+            // ease: 'power2.inOut',
+          }) 
     }
 
     const handleScroll = () => {
@@ -56,11 +61,13 @@ export default function (props) {
         }        
     });
 
-    if (currentSectionId === 'about2') {
+    if(!isActive){
+      
+      if (currentSectionId === 'about2') {
         setNavColor('#00FFB0');
         setLogo('/canva-portfolio design/logo_g.svg');
     } else {
-        setNavColor('#B000FF');
+        setNavColor('black');
         setLogo('/canva-portfolio design/logo_p.svg');
       }
           
@@ -70,33 +77,15 @@ export default function (props) {
        setLogo('/canva-portfolio design/logo_g.svg');
        setNavColor('#00FFB0');
         }
+    }
+    else{
+      setNavColor("black")
+    }
+    
           
     setFoot(currentSectionId === 'footer')
 
 
-
-        //   if (currentSectionId === 'about2'){
-        //     setNavColor('#00FFB0')
-        //     setLogo('/canva-portfolio design/logo_g.svg')
-        // }else{
-        //     setNavColor('#B000FF')
-        //     setLogo('/canva-portfolio design/logo_p.svg')
-        // }
-
-        // if(currentSectionId === 'about' | 'work' | 'contact'){
-        //     setLogo('/canva-portfolio design/logo_p.svg')
-        // }
-        // else if (currentSectionId === 'home' | 'about2'){
-        //     setLogo('/canva-portfolio design/logo_g.svg')
-        // }
-
-        // if(currentSectionId === 'footer'){
-        //     setFoot(true)
-        // }else{
-        //     setFoot(false)
-        // }
-      
-      
           
     }
 
@@ -110,8 +99,8 @@ export default function (props) {
       }, []);
 
   return (
-    <div className={ !foot ? isScrolled? ` sm:w-[100vw] sm:px-4 h-[120px] w-[100vw] bg-transparent flex items-center justify-around py-12 transition-all duration-[350ms] ease-in-out fixed`:` sm:w-[100vw] sm:px-4  h-[120px] w-[100vw] bg-transparent flex items-center justify-around py-12 relative transition-all duration-[350ms] ease-in-out`: 'hidden transition-all duration-[350ms] ease-in-out '}>
-        <div className='h-auto w-auto'>
+    <div className={ !foot ? isScrolled? ` sm:w-[100vw] sm:px-4 h-[120px] w-[100vw] flex items-center justify-around py-12 transition-all duration-[350ms] ease-in-out fixed sm:bg-[#B000FF]`:` sm:w-[100vw] sm:px-4  h-[120px] w-[100vw] bg-transparent flex items-center justify-around py-12 relative transition-all duration-[350ms] ease-in-out`: 'hidden transition-all duration-[350ms] ease-in-out '}>
+        <div className='h-auto w-auto z-[100]'>
         <a href='/.'><p className={`font-rust text-[29px] text-[${navColor}] transition-all`}>masha</p></a>
             {/* <a href='/.'><img src={logo} width={'140px'}/></a> */}
         </div>
@@ -223,8 +212,23 @@ export default function (props) {
 
         }
         .close{
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 450px;
+            width: 350px;
+            background-color: white;
             transition: all 500ms ease-in-out;
-            display: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem;
+            margin-top: 1rem;
+            shadow:;
+            z-index: -1;
+            opacity:0;
+            // background-color: red;
             
         
         }
@@ -248,6 +252,21 @@ export default function (props) {
             padding: 0.5rem;
             // z-index: 10;
         }
+        .close{
+          position: fixed;
+          height: 100vh;
+          width: 100vw;
+          background-color: rgb(176, 0, 255);
+          transition: all 500ms ease-in-out;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin: 0px;
+          padding: 0.5rem;
+          // background-color: red;
+          // z-index: 10;
+      }
 
 
         }
